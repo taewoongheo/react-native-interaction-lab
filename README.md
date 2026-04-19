@@ -1,21 +1,17 @@
-# React Native Motion Lab
+# React Native Interaction Lab
 
 This repository is a personal lab for exploring motion in React Native. It focuses on recreating real-world UI patterns and motion effects — animations, interactions, transitions, gesture-driven movements, and any interface elements that move. Through small, focused prototypes, it's a space for technical curiosity and hands-on learning.
 
 ## Getting started
 
-If you haven't already set up a React Native environment, follow the [set-up-your-environment](https://reactnative.dev/docs/set-up-your-environment).
+Built with [Expo](https://expo.dev) SDK 55 using [Continuous Native Generation](https://docs.expo.dev/workflow/continuous-native-generation/) — native `android/` and `ios/` folders are generated on demand by `expo prebuild`.
+
+Make sure your local environment is ready for native builds: see [Expo local development](https://docs.expo.dev/get-started/set-up-your-environment/?mode=development-build).
 
 ### Install dependencies
 
 ```
 npm install
-```
-
-### Install iOS pods
-
-```
-cd ios && pod install && cd ..
 ```
 
 ### Run the app
@@ -32,9 +28,11 @@ npm run ios
 npm run android
 ```
 
+Both commands run `expo prebuild` automatically on first launch and build a development binary.
+
 ## Works
 
-### [Particle Effect](https://github.com/taewoongheo/react-native-motion-lab/blob/main/src/motions/ParticleEffect/ParticleEffect.tsx)
+### [Particle Effect](https://github.com/taewoongheo/react-native-interaction-lab/blob/main/src/interactions/ParticleEffect/ParticleEffect.tsx)
 
 Particle system with touch and drag. Particles are distributed using Poisson disk sampling for natural spacing.
 
@@ -42,7 +40,7 @@ Particle system with touch and drag. Particles are distributed using Poisson dis
 <video src="https://github-production-user-asset-6210df.s3.amazonaws.com/127009780/462796864-2be99a5e-e5ce-400d-abd5-2a71ea9f78f8.mp4?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA/20250705/us-east-1/s3/aws4_request&X-Amz-Date=20250705T155639Z&X-Amz-Expires=300&X-Amz-Signature=e014364503cf3f804c2e3ea173b990f9e560257b7042a67f828fa098051bda8b&X-Amz-SignedHeaders=host" controls muted playsinline width="300" />
 </p>
 
-### [Tunder Slider](https://github.com/taewoongheo/react-native-motion-lab/blob/main/src/motions/TunerSlider/TunerSlider.tsx)
+### [Tunder Slider](https://github.com/taewoongheo/react-native-interaction-lab/blob/main/src/interactions/TunerSlider/TunerSlider.tsx)
 
 A tuner-style slider with snap-to-value functionality. Snaps to discrete values (0-100 in steps of 5) with smooth scrolling and momentum-based selection.
 

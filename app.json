@@ -1,4 +1,20 @@
 {
-  "name": "Motion Lab",
-  "displayName": "Motion Lab"
+  "expo": {
+    "name": "Interaction Lab",
+    "slug": "interaction-lab",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "scheme": "interactionlab",
+    "newArchEnabled": true,
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.taewoongheo.interactionlab"
+    },
+    "android": {
+      "package": "com.taewoongheo.interactionlab"
+    },
+    "plugins": [
+      "expo-router"
+    ]
+  }
 }
