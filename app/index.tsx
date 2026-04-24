@@ -15,6 +15,11 @@ const listData: Array<{
   route: Href;
 }> = [
   {
+    title: "ParallaxAnimation",
+    description: "Parallax Animation",
+    route: "/interactions/parallax-animation",
+  },
+  {
     title: "SpatialTapGesture",
     description: "Spatial Tap Gesture",
     route: "/interactions/spatial-tap-gesture",
