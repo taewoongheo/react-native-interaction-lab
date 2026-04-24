@@ -15,9 +15,14 @@ const listData: Array<{
   route: Href;
 }> = [
   {
+    title: "SpatialTapGesture",
+    description: "Spatial Tap Gesture",
+    route: "/interactions/spatial-tap-gesture",
+  },
+  {
     title: "PanGestureHandler",
     description: "Pan Gesture Handler",
-    route: "/interactions/PanGestureHandler",
+    route: "/interactions/pan-gesture-handler",
   },
   {
     title: "BouncingSquare",
