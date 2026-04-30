@@ -4,26 +4,29 @@
   "main": "expo-router/entry",
   "scripts": {
     "start": "expo start",
-    "ios": "expo start --ios",
-    "android": "expo start --android",
+    "ios": "expo run:ios",
+    "android": "expo run:android",
     "run:android": "expo run:android",
-    "run:ios": "expo run:ios",
-    "prebuild": "expo prebuild"
+    "run:ios": "expo run:ios"
   },
   "dependencies": {
+    "@expo/vector-icons": "^15.1.1",
     "@react-navigation/native": "^7.2.2",
     "@react-navigation/native-stack": "^7.14.11",
     "@shopify/react-native-skia": "2.4.18",
     "expo": "~55.0.15",
     "expo-constants": "~55.0.14",
     "expo-dev-client": "~55.0.28",
+    "expo-font": "~55.0.6",
     "expo-linking": "~55.0.13",
     "expo-router": "~55.0.12",
     "expo-status-bar": "~55.0.5",
     "react": "19.2.0",
     "react-native": "0.83.4",
+    "react-native-animateable-text": "^0.18.1",
     "react-native-gesture-handler": "~2.30.0",
     "react-native-reanimated": "4.2.1",
+    "react-native-redash": "^18.1.5",
     "react-native-safe-area-context": "~5.6.2",
     "react-native-screens": "~4.23.0",
     "react-native-worklets": "0.7.2"
@@ -32,6 +35,11 @@
     "@babel/core": "^7.25.2",
     "@types/react": "~19.2.10",
     "typescript": "~5.9.0"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "@shopify/react-native-skia"
+    ]
   },
   "private": true
 }
