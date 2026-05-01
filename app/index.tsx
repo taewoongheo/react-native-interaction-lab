@@ -15,6 +15,11 @@ const listData: Array<{
   route: Href;
 }> = [
   {
+    title: "ScrollablePercentage",
+    description: "Scrollable percentage",
+    route: "/interactions/scrollable-percentage",
+  },
+  {
     title: "AnimatedText",
     description: "Animated text",
     route: "/interactions/animated-text",
