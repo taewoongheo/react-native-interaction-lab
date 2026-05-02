@@ -3,11 +3,11 @@
   "version": "1.0.0",
   "main": "expo-router/entry",
   "scripts": {
-    "start": "expo start",
-    "ios": "expo run:ios",
-    "android": "expo run:android",
-    "run:android": "expo run:android",
-    "run:ios": "expo run:ios"
+    "start": "npx expo start",
+    "ios": "npx expo start --ios",
+    "android": "npx expo start --android",
+    "run:android": "npx expo run:android",
+    "run:ios": "npx expo run:ios"
   },
   "dependencies": {
     "@expo/vector-icons": "^15.1.1",
@@ -18,6 +18,7 @@
     "expo-constants": "~55.0.14",
     "expo-dev-client": "~55.0.28",
     "expo-font": "~55.0.6",
+    "expo-linear-gradient": "~55.0.13",
     "expo-linking": "~55.0.13",
     "expo-router": "~55.0.12",
     "expo-status-bar": "~55.0.5",
