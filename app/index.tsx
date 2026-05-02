@@ -15,6 +15,11 @@ const listData: Array<{
   route: Href;
 }> = [
   {
+    title: "Scroll Clamp Demo",
+    description: "iOS scroll progress with clamp on/off (SNS demo)",
+    route: "/interactions/scroll-clamp-demo",
+  },
+  {
     title: "Family Number Input",
     description: "Family Number Input",
     route: "/interactions/family-number-input",
