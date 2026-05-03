@@ -15,6 +15,11 @@ const listData: Array<{
   route: Href;
 }> = [
   {
+    title: "Skia Magical Button",
+    description: "Skia Magical Button",
+    route: "/interactions/skia-magical-button",
+  },
+  {
     title: "Scroll Clamp Demo",
     description: "iOS scroll progress with clamp on/off (SNS demo)",
     route: "/interactions/scroll-clamp-demo",
@@ -109,12 +114,13 @@ export default function Main() {
         { paddingTop: insets.top, paddingBottom: insets.bottom },
       ]}
     >
-      <Text style={styles.title}>Interaction Lab</Text>
-
       <View style={styles.listContainer}>
         <FlatList
           data={listData}
           keyExtractor={(item) => String(item.route)}
+          ListHeaderComponent={
+            <Text style={styles.title}>Interaction Lab</Text>
+          }
           renderItem={({ item }) => (
             <ListItem
               title={item.title}

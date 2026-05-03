@@ -68,6 +68,9 @@ importers:
       react-native-screens:
         specifier: ~4.23.0
         version: 4.23.0(react-native@0.83.4(@babel/core@7.29.0)(@types/react@19.2.14)(react@19.2.0))(react@19.2.0)
+      react-native-skia-gesture:
+        specifier: ^0.4.0
+        version: 0.4.0(react-native@0.83.4(@babel/core@7.29.0)(@types/react@19.2.14)(react@19.2.0))(react@19.2.0)
       react-native-worklets:
         specifier: 0.7.2
         version: 0.7.2(@babel/core@7.29.0)(react-native@0.83.4(@babel/core@7.29.0)(@types/react@19.2.14)(react@19.2.0))(react@19.2.0)
@@ -2646,6 +2649,13 @@ packages:
     resolution: {integrity: sha512-XhO3aK0UeLpBn4kLecd+J+EDeRRJlI/Ro9Fze06vo1q163VeYtzfU9QS09/VyDFMWR1qxDC1iazCArTPSFFiPw==}
     peerDependencies:
       react: '*'
+      react-native: '*'
+
+  react-native-skia-gesture@0.4.0:
+    resolution: {integrity: sha512-uCd5i8DFkHmGAJqbVwUBaoLoLwvrO3q+yydCQHMM8w71qoD7Wy1IbeOQhIcP3vGwTW09bP4KNGeJfr/ZoW9CvQ==}
+    engines: {node: '>= 18.0.0'}
+    peerDependencies:
+      react: '>= 18.0.0'
       react-native: '*'
 
   react-native-worklets@0.7.2:
@@ -6238,6 +6248,11 @@ snapshots:
       react-freeze: 1.0.4(react@19.2.0)
       react-native: 0.83.4(@babel/core@7.29.0)(@types/react@19.2.14)(react@19.2.0)
       warn-once: 0.1.1
+
+  react-native-skia-gesture@0.4.0(react-native@0.83.4(@babel/core@7.29.0)(@types/react@19.2.14)(react@19.2.0))(react@19.2.0):
+    dependencies:
+      react: 19.2.0
+      react-native: 0.83.4(@babel/core@7.29.0)(@types/react@19.2.14)(react@19.2.0)
 
   react-native-worklets@0.7.2(@babel/core@7.29.0)(react-native@0.83.4(@babel/core@7.29.0)(@types/react@19.2.14)(react@19.2.0))(react@19.2.0):
     dependencies:
