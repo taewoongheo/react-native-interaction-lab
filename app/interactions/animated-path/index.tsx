@@ -10,7 +10,7 @@ import {
   vec,
 } from "@shopify/react-native-skia";
 import { useMemo, useState } from "react";
-import { View } from "react-native";
+import { Dimensions, View } from "react-native";
 import {
   Easing,
   useDerivedValue,
@@ -36,6 +36,7 @@ const paths = [
 
 const CANVAS_HEIGHT = 300;
 const PADDING_Y = 20;
+const PADDING_X = 16;
 
 function getPath(pathIndex: number, canvasWidth: number) {
   const path = Skia.Path.Make();
@@ -51,7 +52,7 @@ function getPath(pathIndex: number, canvasWidth: number) {
 
 export default function AnimatedPath() {
   const option = useSharedValue(0);
-  const [canvasWidth, setCanvasWidth] = useState(0);
+  const canvasWidth = Dimensions.get("window").width - PADDING_X * 2;
 
   const progress = useDerivedValue(() => {
     return withTiming(option.value, {
@@ -75,7 +76,7 @@ export default function AnimatedPath() {
       <View
         style={{
           flex: 1,
-          paddingHorizontal: 16,
+          paddingHorizontal: PADDING_X,
           justifyContent: "center",
           gap: 16,
         }}
@@ -87,38 +88,30 @@ export default function AnimatedPath() {
             option.value = event.nativeEvent.selectedSegmentIndex;
           }}
         />
-        {/* Canvas 크기 측정하는 다른 패턴? */}
-        <View
-          onLayout={(event) => {
-            setCanvasWidth(event.nativeEvent.layout.width);
+        <Canvas
+          style={{
+            width: "100%",
+            height: CANVAS_HEIGHT + PADDING_Y * 2,
           }}
-          style={{ width: "100%", height: CANVAS_HEIGHT }}
         >
-          <Canvas
-            style={{
-              width: "100%",
-              height: CANVAS_HEIGHT + PADDING_Y * 2,
-            }}
+          <Path
+            path={animatedPath}
+            color={"#c100cf"}
+            style={"stroke"}
+            strokeWidth={4}
+            strokeCap={"round"}
           >
-            <Path
-              path={animatedPath}
-              color={"#c100cf"}
-              style={"stroke"}
-              strokeWidth={4}
-              strokeCap={"round"}
-            >
-              <CornerPathEffect r={64} />
-            </Path>
-            <Line
-              p1={vec(0, CANVAS_HEIGHT * 0.3)}
-              p2={vec(canvasWidth, CANVAS_HEIGHT * 0.3)}
-              strokeWidth={2}
-              color={"#cac8c2"}
-            >
-              <DashPathEffect intervals={[10, 10]} />
-            </Line>
-          </Canvas>
-        </View>
+            <CornerPathEffect r={64} />
+          </Path>
+          <Line
+            p1={vec(0, CANVAS_HEIGHT * 0.3)}
+            p2={vec(canvasWidth, CANVAS_HEIGHT * 0.3)}
+            strokeWidth={2}
+            color={"#cac8c2"}
+          >
+            <DashPathEffect intervals={[10, 10]} />
+          </Line>
+        </Canvas>
       </View>
     </SafeAreaView>
   );
