@@ -15,6 +15,11 @@ const listData: Array<{
   route: Href;
 }> = [
   {
+    title: "AnimatedPath",
+    description: "AnimatedPath",
+    route: "/interactions/animated-path",
+  },
+  {
     title: "Skia Magical Button",
     description: "Skia Magical Button",
     route: "/interactions/skia-magical-button",
