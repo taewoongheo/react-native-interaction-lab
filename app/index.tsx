@@ -15,6 +15,11 @@ const listData: Array<{
   route: Href;
 }> = [
   {
+    title: "Animate Through A Path",
+    description: "Animate Through A Path",
+    route: "/interactions/animate-through-a-path",
+  },
+  {
     title: "AnimatedPath",
     description: "AnimatedPath",
     route: "/interactions/animated-path",
@@ -23,6 +28,11 @@ const listData: Array<{
     title: "Skia Magical Button",
     description: "Skia Magical Button",
     route: "/interactions/skia-magical-button",
+  },
+  {
+    title: "Skia Gesture Comparison",
+    description: "GestureDetector vs react-native-skia-gesture (SNS demo)",
+    route: "/interactions/skia-gesture-comparison",
   },
   {
     title: "Scroll Clamp Demo",
