@@ -15,6 +15,11 @@ const listData: Array<{
   route: Href;
 }> = [
   {
+    title: "AnimatedBezierCurve",
+    description: "Animated Bezier Curve",
+    route: "/interactions/animated-bezier-curve",
+  },
+  {
     title: "Animate Through A Path",
     description: "Animate Through A Path",
     route: "/interactions/animate-through-a-path",
