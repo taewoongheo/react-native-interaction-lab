@@ -15,6 +15,16 @@ const listData: Array<{
   route: Href;
 }> = [
   {
+    title: "Invert Clip Blob",
+    description: "Invert Clip Blob",
+    route: "/interactions/invert-clip-blob",
+  },
+  {
+    title: "ClipPanGesture",
+    description: "Clip Pan Gesture",
+    route: "/interactions/clip-pan-gesture",
+  },
+  {
     title: "AnimatedBezierCurve",
     description: "Animated Bezier Curve",
     route: "/interactions/animated-bezier-curve",
