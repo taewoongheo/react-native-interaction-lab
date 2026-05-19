@@ -15,6 +15,11 @@ const listData: Array<{
   route: Href;
 }> = [
   {
+    title: "Bottom Tab Animation",
+    description: "Bottom Tab Animation",
+    route: "/interactions/bottom-tab-animation/apple",
+  },
+  {
     title: "Invert Clip Blob",
     description: "Invert Clip Blob",
     route: "/interactions/invert-clip-blob",
