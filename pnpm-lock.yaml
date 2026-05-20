@@ -11,6 +11,9 @@ importers:
       '@expo/vector-icons':
         specifier: ^15.1.1
         version: 15.1.1(expo-font@55.0.6)(react-native@0.83.4(@babel/core@7.29.0)(@types/react@19.2.14)(react@19.2.0))(react@19.2.0)
+      '@react-native-community/slider':
+        specifier: 5.1.2
+        version: 5.1.2
       '@react-native-segmented-control/segmented-control':
         specifier: 2.5.7
         version: 2.5.7(react-native@0.83.4(@babel/core@7.29.0)(@types/react@19.2.14)(react@19.2.0))(react@19.2.0)
@@ -1070,6 +1073,9 @@ packages:
     peerDependenciesMeta:
       '@types/react':
         optional: true
+
+  '@react-native-community/slider@5.1.2':
+    resolution: {integrity: sha512-UV/MjCyCtSjS5BQDrrGIMmCXm309xEG6XbR0Dj65kzTraJSVDxSjQS2uBUXgX+5SZUOCzCxzv3OufOZBdtQY4w==}
 
   '@react-native-segmented-control/segmented-control@2.5.7':
     resolution: {integrity: sha512-l84YeVX8xAU3lvOJSvV4nK/NbGhIm2gBfveYolwaoCbRp+/SLXtc6mYrQmM9ScXNwU14mnzjQTpTHWl5YPnkzQ==}
@@ -4455,6 +4461,8 @@ snapshots:
       react: 19.2.0
     optionalDependencies:
       '@types/react': 19.2.14
+
+  '@react-native-community/slider@5.1.2': {}
 
   '@react-native-segmented-control/segmented-control@2.5.7(react-native@0.83.4(@babel/core@7.29.0)(@types/react@19.2.14)(react@19.2.0))(react@19.2.0)':
     dependencies:

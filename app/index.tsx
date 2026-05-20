@@ -15,6 +15,16 @@ const listData: Array<{
   route: Href;
 }> = [
   {
+    title: "CornerPathEffect",
+    description: "Dynamic corner radius for a single Skia path",
+    route: "/interactions/corner-path-effect",
+  },
+  {
+    title: "Image Shader Transitions",
+    description: "Image Shader Transitions",
+    route: "/interactions/image-shader-transitions",
+  },
+  {
     title: "Bottom Tab Animation",
     description: "Bottom Tab Animation",
     route: "/interactions/bottom-tab-animation/apple",
