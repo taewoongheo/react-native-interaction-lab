@@ -15,6 +15,11 @@ const listData: Array<{
   route: Href;
 }> = [
   {
+    title: "Navigate with Shaders",
+    description: "Navigate with Shaders",
+    route: "/interactions/navigating-with-shaders",
+  },
+  {
     title: "CornerPathEffect",
     description: "Dynamic corner radius for a single Skia path",
     route: "/interactions/corner-path-effect",

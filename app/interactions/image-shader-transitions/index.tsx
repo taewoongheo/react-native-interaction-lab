@@ -4,7 +4,6 @@ import {
   Fill,
   ImageShader,
   Shader,
-  Skia,
   useImage,
 } from "@shopify/react-native-skia";
 import { Pressable, Text, View } from "react-native";
@@ -13,7 +12,7 @@ import {
   useSharedValue,
   withTiming,
 } from "react-native-reanimated";
-import { glsl } from "../../lib/glsl-helper";
+import { glsl, transition } from "../../lib/glsl-helper";
 import { useState } from "react";
 
 const FIRST_IMAGE =
@@ -23,30 +22,6 @@ const SECOND_IMAGE =
 
 const canvasWidth = 300;
 const canvasHeight = canvasWidth * 0.75;
-
-export const transition = (openGLTransition: string) => {
-  return glsl`
-    uniform shader image1;
-    uniform shader image2;
-    uniform float progress;
-    uniform float2 resolution;
- 
-    half4 getFromColor(float2 uv) {
-      return image1.eval(uv * resolution);
-    }
- 
-    half4 getToColor(float2 uv) {
-      return image2.eval(uv * resolution);
-    }
- 
-    ${openGLTransition}
- 
-    half4 main(vec2 xy) {
-      vec2 uv = xy / resolution;
-      return transition(uv);
-    }
-  `;
-};
 
 const directionalShader = glsl`
   // Author: pschroen - License: MIT
@@ -65,9 +40,7 @@ const directionalShader = glsl`
   }
 `;
 
-const shaderSource = transition(directionalShader);
-
-const runtimeEffect = Skia.RuntimeEffect.Make(shaderSource);
+const runtimeEffect = transition(directionalShader);
 
 export default function ImageShaderTransitions() {
   const image1 = useImage(FIRST_IMAGE);
