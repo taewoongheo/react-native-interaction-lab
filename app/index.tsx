@@ -15,6 +15,21 @@ const listData: Array<{
   route: Href;
 }> = [
   {
+    title: "Expandable Bottom Sheet",
+    description: "Compact-to-expanded sheet with drag and button controls",
+    route: "/interactions/expandable-bottom-sheet",
+  },
+  {
+    title: "Cylinder Carousel",
+    description: "3D arc carousel driven by pan and tap gestures",
+    route: "/interactions/cylinder-carousel",
+  },
+  {
+    title: "Action Slider",
+    description: "Action Slider",
+    route: "/interactions/action-slider",
+  },
+  {
     title: "Navigate with Shaders",
     description: "Navigate with Shaders",
     route: "/interactions/navigating-with-shaders",

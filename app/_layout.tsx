@@ -13,6 +13,7 @@ export default function RootLayout() {
           screenOptions={{
             headerShown: false,
             contentStyle: styles.screen,
+            gestureEnabled: false,
           }}
         />
       </SafeAreaProvider>

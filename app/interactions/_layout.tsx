@@ -1,5 +1,5 @@
-import { Stack } from 'expo-router';
-import { StyleSheet } from 'react-native';
+import { Stack } from "expo-router";
+import { StyleSheet } from "react-native";
 
 export default function InteractionsLayout() {
   return (
@@ -15,6 +15,6 @@ export default function InteractionsLayout() {
 const styles = StyleSheet.create({
   screen: {
     flex: 1,
-    backgroundColor: '#FAFAFA',
+    backgroundColor: "#FAFAFA",
   },
 });
