@@ -2,6 +2,11 @@ import { Skia } from "@shopify/react-native-skia";
 
 type Values = Array<string | number>;
 
+export const glsl = (source: TemplateStringsArray, ...values: Values) => {
+  const processed = source.flatMap((s, i) => [s, values[i]]).filter(Boolean);
+  return processed.join("");
+};
+
 export const frag = (source: TemplateStringsArray, ...values: Values) => {
   const code = glsl(source, ...values);
   const rt = Skia.RuntimeEffect.Make(code);
@@ -9,11 +14,6 @@ export const frag = (source: TemplateStringsArray, ...values: Values) => {
     throw new Error("Couln't Compile Shader");
   }
   return rt;
-};
-
-export const glsl = (source: TemplateStringsArray, ...values: Values) => {
-  const processed = source.flatMap((s, i) => [s, values[i]]).filter(Boolean);
-  return processed.join("");
 };
 
 export const transition = (openGLTransition: string) => {

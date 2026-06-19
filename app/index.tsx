@@ -15,6 +15,11 @@ const listData: Array<{
   route: Href;
 }> = [
   {
+    title: "Water Ripple Shader",
+    description: "Single-tap image displacement ripple",
+    route: "/interactions/water-ripple-shader",
+  },
+  {
     title: "Expandable Bottom Sheet",
     description: "Compact-to-expanded sheet with drag and button controls",
     route: "/interactions/expandable-bottom-sheet",

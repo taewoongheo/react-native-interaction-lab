@@ -60,8 +60,6 @@ const shader = glsl`
 
 const ShaderTransitionEffect = transition(shader);
 
-const AnimatedCanvas = createAnimatedComponent(Canvas);
-
 export function TransitionsProvider({ children }: PropsWithChildren) {
   const viewRef = useRef(null);
   const firstImage = useSharedValue<SkImage | null>(null);
